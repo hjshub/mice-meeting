@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../include/head.html', { page_main: false, page_title:'부스라이브 목록' })
+  </head>
+  <body>
+    @@include('../include/skipNav.html')
+
+    <div id="layout">
+      <!-- #gnb -->
+      <header id="gnb">@@include('../include/gnb.html', { path:'..' })</header>
+      <!-- // #gnb -->
+
+      <!-- #contents -->
+      <main id="contents">
+        <h1 class="hidden-txt">미팅프로그램 - 부스라이브</h1>
+
+        <!-- 상단 배너 -->
+        <section class="top-bnr">
+          <div class="container">
+            <h2>
+              <strong>미팅프로그램</strong><br />
+              <span><b>미팅관리자</b>님 반갑습니다! <br class="mob-only" />미팅프로그램 페이지 입니다.</span>
+            </h2>
+          </div>
+        </section>
+        <section class="contents">
+          <nav class="tab-menu">
+            <ul>
+              <li><a href="../webina/list.html">웨비나</a></li>
+              <li><a href="../vdConference/list.html">화상회의</a></li>
+              <li class="on"><a href="../booth/list.html">부스라이브</a></li>
+              <li><a href="../match/list.html">매치메이킹</a></li>
+            </ul>
+          </nav>
+          <div class="cts-wrap">
+            <header class="cts-header tit">
+              <h3>부스라이브 목록</h3>
+            </header>
+            <div class="cts-body">
+              <div class="container">
+                <div class="sub-tit">
+                  <h4>2022 제 31회 국제천문연맹 총회 XXXIst General Assembly of International</h4>
+                </div>
+                <div class="filter-wrap">
+                  <div><strong>총 300건</strong></div>
+                  <div>
+                    <dl>
+                      <dt><b>장소</b></dt>
+                      <dd>
+                        <div class="select-wrap">
+                          <label for="selectPlace"><em class="hidden-txt">장소 선택</em></label>
+                          <select name="" id="selectPlace">
+                            <option value="" selected>부산 벡스코</option>
+                          </select>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="wide">
+                      <dt><b>상태</b></dt>
+                      <dd>
+                        <div class="select-wrap">
+                          <label for="selectStatus"><em class="hidden-txt">상태 선택</em></label>
+                          <select name="" id="selectStatus">
+                            <option value="" selected>전체</option>
+                          </select>
+                        </div>
+                        <div class="text-wrap has-button">
+                          <input type="text" placeholder="부스번호, 부스, 업체 검색" />
+                          <div class="btn-wrap inline">
+                            <button class="btn-search bg-navy2 rounded"><em>검색</em></button>
+                          </div>
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+
+                <!-- pc -->
+                <div class="tblStyle pc-only">
+                  <table>
+                    <caption>
+                      부스라이브 목록(순번, 부스명(업체명), 상태, 장소, 부스 담당자로 구성된 표)
+                    </caption>
+                    <colgroup>
+                      <col style="width: 10%" />
+                      <col style="width: auto" />
+                      <col style="width: 10%" />
+                      <col style="width: 15%" />
+                      <col style="width: 15%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">순번</th>
+                        <th scope="col">부스명<em>(업체명)</em></th>
+                        <th scope="col">상태</th>
+                        <th scope="col">장소</th>
+                        <th scope="col">부스 담당자</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span>A015</span></td>
+                        <td class="tit">
+                          <b>
+                            <a href="./detail.html">천문학연구소</a>
+                          </b>
+                        </td>
+                        <td><span class="txt-color skyblue">라이브</span></td>
+                        <td><span>부산 벡스코 A관</span></td>
+                        <td><span>위성관제 (대리 홍길동)</span></td>
+                      </tr>
+                      <tr>
+                        <td><span>A014</span></td>
+                        <td class="tit">
+                          <b>
+                            <a href="./detail.html">기상청</a>
+                          </b>
+                        </td>
+                        <td><span class="txt-color skyblue">라이브</span></td>
+                        <td><span>부산 벡스코 B관</span></td>
+                        <td><span>PCN</span></td>
+                      </tr>
+                      <tr>
+                        <td><span>A013</span></td>
+                        <td class="tit">
+                          <span>
+                            <a href="./detail.html">GPS 시스템 - 위성관제시스템 사업부</a>
+                          </span>
+                        </td>
+                        <td><span>중지</span></td>
+                        <td><span>부산 벡스코 D관</span></td>
+                        <td><span>PCN</span></td>
+                      </tr>
+                      <tr>
+                        <td><span>A012</span></td>
+                        <td class="tit">
+                          <span>
+                            <a href="./detail.html">GPS 시스템 - 위성관제시스템 사업부 2</a>
+                          </span>
+                        </td>
+                        <td><span>중지</span></td>
+                        <td><span>부산 벡스코 A관</span></td>
+                        <td><span>PCN</span></td>
+                      </tr>
+                      <tr>
+                        <td><span>A011</span></td>
+                        <td class="tit">
+                          <span>
+                            <a href="./detail.html">GPS 시스템 - 위성관제시스템 사업부 3GPS 시스템 - 위성관제시스템 사업부 3</a>
+                          </span>
+                        </td>
+                        <td><span>중지</span></td>
+                        <td><span>부산 벡스코 A관</span></td>
+                        <td><span>PCN</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- mobile -->
+                <div class="tblStyle mob-only">
+                  <ul>
+                    <li>
+                      <div class="tit">
+                        <b>
+                          <a href="./detail.html">천문학연구소</a>
+                        </b>
+                      </div>
+                      <dl>
+                        <dt>상태</dt>
+                        <dd><span class="txt-color skyblue">라이브</span></dd>
+                        <dt>장소</dt>
+                        <dd>부산 벡스코 A관</dd>
+                      </dl>
+                      <dl>
+                        <dt>부스 담당자</dt>
+                        <dd>위성관제(대리 홍길동)</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <div class="tit">
+                        <b>
+                          <a href="./detail.html">기상청</a>
+                        </b>
+                      </div>
+                      <dl>
+                        <dt>상태</dt>
+                        <dd><span class="txt-color skyblue">라이브</span></dd>
+                        <dt>장소</dt>
+                        <dd>부산 벡스코 B관</dd>
+                      </dl>
+                      <dl>
+                        <dt>부스 담당자</dt>
+                        <dd>PCN</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <div class="tit">
+                        <span>
+                          <a href="./detail.html">GPS 시스템 - 위성관제시스템 사업부</a>
+                        </span>
+                      </div>
+                      <dl>
+                        <dt>상태</dt>
+                        <dd><span>중지</span></dd>
+                        <dt>장소</dt>
+                        <dd>부산 벡스코 D관</dd>
+                      </dl>
+                      <dl>
+                        <dt>부스 담당자</dt>
+                        <dd>PCN</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <div class="tit">
+                        <span>
+                          <a href="./detail.html">GPS 시스템 - 위성관제시스템 사업부 2</a>
+                        </span>
+                      </div>
+                      <dl>
+                        <dt>상태</dt>
+                        <dd><span>중지</span></dd>
+                        <dt>장소</dt>
+                        <dd>부산 벡스코 A관</dd>
+                      </dl>
+                      <dl>
+                        <dt>부스 담당자</dt>
+                        <dd>PCN</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <div class="tit">
+                        <span>
+                          <a href="./detail.html">GPS 시스템 - 위성관제시스템 사업부 3GPS 시스템 - 위성관제시스템 사업부 3</a>
+                        </span>
+                      </div>
+                      <dl>
+                        <dt>상태</dt>
+                        <dd><span>중지</span></dd>
+                        <dt>장소</dt>
+                        <dd>부산 벡스코 A관</dd>
+                      </dl>
+                      <dl>
+                        <dt>부스 담당자</dt>
+                        <dd>PCN</dd>
+                      </dl>
+                    </li>
+                  </ul>
+                </div>
+                <!-- pc -->
+                <div class="paging pc-only">
+                  <a href="#" class="first disable"><em class="hidden-txt">첫 페이지</em></a>
+                  <a href="#" class="prev disable"><em class="hidden-txt">이전 페이지</em></a>
+                  <span>1</span>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">5</a>
+                  <a href="#">6</a>
+                  <a href="#">7</a>
+                  <a href="#">8</a>
+                  <a href="#">9</a>
+                  <a href="#">10</a>
+                  <a href="#" class="next"><em class="hidden-txt">다음 페이지</em></a>
+                  <a href="#" class="last"><em class="hidden-txt">마지막 페이지</em></a>
+                </div>
+                <!-- mobile -->
+                <div class="btn-wrap align-c mob-only">
+                  <button type="button" class="btn-prev"><em>이전</em></button>
+                  <span><b>1</b>&nbsp;&nbsp;of&nbsp;&nbsp;<em>10</em></span>
+                  <button type="button" class="btn-next"><em>다음</em></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- // #contents -->
+
+      <!-- #footer -->
+      <footer id="footer">@@include('../include/footer.html')</footer>
+      <!-- // #footer -->
+    </div>
+  </body>
+</html>

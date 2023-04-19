@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../include/head.html', { page_main: false, page_title:'화상회의 상세' })
+  </head>
+  <body>
+    @@include('../include/skipNav.html')
+
+    <div id="layout">
+      <!-- #gnb -->
+      <header id="gnb">@@include('../include/gnb.html', { path:'..' })</header>
+      <!-- // #gnb -->
+
+      <!-- #contents -->
+      <main id="contents">
+        <h1 class="hidden-txt">미팅프로그램 - 화상회의</h1>
+
+        <!-- 상단 배너 -->
+        <section class="top-bnr">
+          <div class="container">
+            <h2>
+              <strong>미팅프로그램</strong><br />
+              <span><b>미팅관리자</b>님 반갑습니다! <br class="mob-only" />미팅프로그램 페이지 입니다.</span>
+            </h2>
+          </div>
+        </section>
+        <section class="contents">
+          <nav class="tab-menu">
+            <ul>
+              <li><a href="../webina/list.html">웨비나</a></li>
+              <li class="on"><a href="../vdConference/list.html">화상회의</a></li>
+              <li><a href="../booth/list.html">부스라이브</a></li>
+              <li><a href="../match/list.html">매치메이킹</a></li>
+            </ul>
+          </nav>
+          <div class="cts-wrap">
+            <header class="cts-header tit">
+              <h3>화상회의 상세</h3>
+            </header>
+            <div class="cts-body">
+              <div class="container flex--wrap">
+                <div class="cts-view flex--wrap column">
+                  <div class="vdArea">
+                    <div class="status">
+                      <span class="live"><em>라이브</em></span>
+                      <span class="recording"><em>녹화중</em></span>
+                    </div>
+                    <div class="member-wrap flex--wrap">
+                      <div class="major"></div>
+                      <div class="other">
+                        <ul class="grid-wrap col-2-2">
+                          @@for(var i = 0; i < 8; i++){
+                          <li class="grid-item">
+                            <div class="thumb"></div>
+                          </li>
+                          }
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- <button class="play" type="button"><em class="hidden-txt">재생</em></button> -->
+                  </div>
+                  <article>
+                    <header class="flex--wrap column">
+                      <h4>FRB의 다중 파장 연구 및 우주론적 사용</h4>
+                      <div class="vdSet">
+                        <ul>
+                          <li class="camera">
+                            <a href=""><em class="hidden-txt">카메라</em></a>
+                          </li>
+                          <li class="mic">
+                            <a href=""><em class="hidden-txt">마이크</em></a>
+                          </li>
+                          <li class="setting">
+                            <a href="" class="button-active-modal" data-modal-name="setCamera">
+                              <em class="hidden-txt">설정</em>
+                            </a>
+                          </li>
+                        </ul>
+                        <div class="btn-wrap mob-only inline">
+                          <button type="button" class="btn-openSideCts bg-navy2 rounded"><em>채팅창 열기</em></button>
+                        </div>
+                      </div>
+                      <div class="etcInfo">
+                        <dl>
+                          <dt><b>날짜</b></dt>
+                          <dd>2022-06-20</dd>
+                        </dl>
+                        <dl>
+                          <dt><b>시간</b></dt>
+                          <dd>13시30분 ~ 15시 30분</dd>
+                        </dl>
+                        <dl>
+                          <dt><b>장소</b></dt>
+                          <dd>벡스코 B관</dd>
+                        </dl>
+                      </div>
+                    </header>
+                    <div class="detail">
+                      <div class="survey">
+                        <!-- 설문조사 -->
+                        <div class="surveyItem">
+                          <span class="surveyInfo flex--wrap">
+                            <strong class="name">설문조사 A</strong>
+                            <span><b class="persons">1,231</b>명</span>
+                          </span>
+                          <button type="button"><em class="hidden-txt">투표하기</em></button>
+                        </div>
+                        <div class="surveyItem">
+                          <span class="surveyInfo flex--wrap">
+                            <strong class="name">설문조사 B</strong>
+                            <span><b class="persons">1,231</b>명</span>
+                          </span>
+                          <button type="button"><em class="hidden-txt">투표하기</em></button>
+                        </div>
+                      </div>
+                      <div class="description">
+                        <!-- 내용 -->
+                        <p>국제어두운하늘협회 (The International Dark-Sky Assoiciation) 웨비나 입니다.</p>
+                        <p>
+                          기본적인 사항은 홈페이지를 참고해 주세요.
+                          <a href="https://www.darksky.org/get-involved/" target="_blank"
+                            >https://www.darksky.org/get-involved/</a
+                          >
+                        </p>
+                        <p>&nbsp;</p>
+                        <p>추가 발표자 : 홍길동</p>
+                        <p>발표자 : 이순신</p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                @@include('../include/ctsSide.html')
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- // #contents -->
+
+      <!-- #footer -->
+      <footer id="footer">@@include('../include/footer.html')</footer>
+      <!-- // #footer -->
+
+      <!-- 모달 -->
+
+      <!-- 설정 -->
+      @@include('../include/modal_setCamera.html')
+
+      <!-- 투표 관리 -->
+      @@include('../include/modal_setSurvey.html')
+
+      <!-- 회의록 관리 -->
+      @@include('../include/modal_setConference.html')
+    </div>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<aside class="cts-side flex--wrap column" id="ctsSide">
+  <div class="side-contents">
+    <div class="side-header" id="dragArea">
+      <div class="side-drag mob-only">
+        <em class="hidden-txt">채팅창 드래그 영역</em>
+        <button class="btn-offSideCts mob-only" type="button">
+          <em class="hidden-txt">채팅창 닫기</em>
+        </button>
+      </div>
+      <ul class="side-tabMenu">
+        <li class="on">
+          <a href=""><span>채팅</span></a>
+        </li>
+        <li>
+          <a href=""><span>참여자</span><em>(2,090)</em></a>
+        </li>
+      </ul>
+    </div>
+    <!-- 채팅 목록 -->
+    <div class="chat--list">
+      <div class="scroll-area">
+        <div class="customedScroll">
+          <dl>
+            <dt class="flex--wrap">
+              <span class="class orange">사회자</span>
+              <b class="name">홍길동</b>
+              <em class="date">13:31</em>
+            </dt>
+            <dd>
+              <span> 반갑습니다~ 사회자 홍길동이라고합니다. 언제든 질문 해주 시면 답변해드리겠습니다. </span>
+            </dd>
+          </dl>
+          <dl>
+            <dt class="flex--wrap">
+              <b class="name">영순이</b>
+              <em class="date">13:32</em>
+            </dt>
+            <dd>
+              <span>Request to share data.</span>
+            </dd>
+            <dd>
+              <a href="javascript:void(0);">한국어로 번역</a>
+            </dd>
+          </dl>
+          <dl>
+            <dt class="flex--wrap">
+              <b class="name">아무개</b>
+              <em class="date">13:33</em>
+            </dt>
+            <dd>
+              <span>안녕하세요 반갑습니다~</span>
+            </dd>
+          </dl>
+          <dl>
+            <dt class="flex--wrap">
+              <b class="name">영순이</b>
+              <em class="date">13:34</em>
+            </dt>
+            <dd>
+              <span>Request to share data.</span>
+            </dd>
+            <dd>
+              <a href="javascript:void(0);">한국어로 번역</a>
+            </dd>
+          </dl>
+          <dl>
+            <dt class="flex--wrap">
+              <b class="name">아무개</b>
+              <em class="date">13:35</em>
+            </dt>
+            <dd>
+              <span>안녕하세요 반갑습니다~</span>
+            </dd>
+          </dl>
+          <dl>
+            <dt class="flex--wrap">
+              <b class="name">영순이</b>
+              <em class="date">13:36</em>
+            </dt>
+            <dd>
+              <span>Request to share data.</span>
+            </dd>
+            <dd>
+              <a href="javascript:void(0);">한국어로 번역</a>
+            </dd>
+          </dl>
+          <dl>
+            <dt class="flex--wrap">
+              <b class="name">아무개</b>
+              <em class="date">13:37</em>
+            </dt>
+            <dd>
+              <span>안녕하세요 반갑습니다~</span>
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <div class="messages flex--wrap">
+        <label for="enterMsg"><em class="hidden-txt">메시지 입력</em></label>
+        <input type="text" id="enterMsg" placeholder="메시지를 입력하세요." />
+        <button type="button" class="sendMsg"><em class="hidden-txt">메시지 전송</em></button>
+      </div>
+    </div>
+    <!-- 참여자 목록 -->
+    <div class="participants--list"></div>
+  </div>
+  <div class="settings pc-only">
+    <ul class="grid-wrap col-2-2">
+      <li class="grid-item">
+        <button type="button" class="btn-default wide rounded bg-navy2">
+          <em>방송시작 &middot; 종료</em>
+        </button>
+      </li>
+      <li class="grid-item">
+        <button type="button" class="btn-default wide rounded bg-skyblue">
+          <em>녹화시작 &middot; 종료</em>
+        </button>
+      </li>
+      <li class="grid-item">
+        <button type="button" class="btn-default wide rounded bg-green button-active-modal" data-modal-name="setConference">
+          <em>회의록 관리</em>
+        </button>
+      </li>
+      <li class="grid-item">
+        <button type="button" class="btn-default wide rounded bg-orange button-active-modal" data-modal-name="setSurvey">
+          <em>투표관리</em>
+        </button>
+      </li>
+      <li class="grid-item">
+        <button type="button" class="btn-default wide rounded bg-blueGray">
+          <em>회의록 보기</em>
+        </button>
+      </li>
+      <li class="grid-item">
+        <button type="button" class="btn-default wide rounded bg-gray">
+          <em>나가기</em>
+        </button>
+      </li>
+    </ul>
+  </div>
+</aside>
