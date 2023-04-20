@@ -1153,6 +1153,7 @@ main {
                 padding: 0 20px;
                 border-radius: 10px 0 0 10px;
                 border: 1px solid $blueGray;
+                background-color: $white;
 
                 @include _bp(561px) {
                   width: auto;

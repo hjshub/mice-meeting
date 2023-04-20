@@ -58,6 +58,7 @@
         width: 100%;
         line-height: 1.4;
         font-size: 1.6rem;
+        position: relative;
       }
     }
 
@@ -128,6 +129,24 @@
     }
 
     &#modal-setMatchmaking {
+      .modal-body {
+        .modal-title {
+          h5 {
+            padding-left: 25px;
+
+            &::before {
+              @include icon;
+              @include icon-caution;
+              position: absolute;
+              top: 50%;
+              left: 0;
+              @include transform(translateY(-50%));
+              content: '';
+            }
+          }
+        }
+      }
+
       .modal-contents {
         margin-top: 0;
       }
