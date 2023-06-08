@@ -53,6 +53,15 @@
       .finish {
         text-decoration: line-through;
       }
+      .modify * {
+        color: blue !important;
+      }
+      .break-word {
+        word-break: keep-all;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
     </style>
   </head>
   <body>
@@ -88,38 +97,74 @@
                 <td><a href="../index.html" target="_blank">index.html</a></td>
                 <td>완료</td>
               </tr>
-              <tr>
+              <tr class="modify">
                 <td class="count"></td>
-                <td rowspan="2">웨비나</td>
+                <td rowspan="5">웨비나</td>
                 <td>목록</td>
                 <td><a href="../webina/list.html" target="_blank">webina/list.html</a></td>
-                <td>완료</td>
+                <td>수정</td>
               </tr>
-              <tr>
+              <tr class="modify">
+                <td class="count"></td>
+                <td>목록 관리 (관리자)</td>
+                <td><a href="../webina/list_mgt.html" target="_blank">webina/list_mgt.html</a></td>
+                <td>추가</td>
+              </tr>
+              <tr class="modify">
                 <td class="count"></td>
                 <td>상세</td>
                 <td><a href="../webina/detail.html" target="_blank">webina/detail.html</a></td>
-                <td>완료</td>
+                <td>수정</td>
               </tr>
-              <tr>
+              <tr class="modify">
                 <td class="count"></td>
-                <td rowspan="2">화상회의</td>
+                <td>생성</td>
+                <td><a href="../webina/create.html" target="_blank">webina/create.html</a></td>
+                <td>추가</td>
+              </tr>
+              <tr class="modify">
+                <td class="count"></td>
+                <td>수정&#47;삭제</td>
+                <td><a href="../webina/modify.html" target="_blank">webina/modify.html</a></td>
+                <td>추가</td>
+              </tr>
+              <tr class="modify">
+                <td class="count"></td>
+                <td rowspan="4">화상회의</td>
                 <td>목록</td>
                 <td><a href="../vdConference/list.html" target="_blank">vdConference/list.html</a></td>
-                <td>완료</td>
+                <td>수정</td>
               </tr>
-              <tr>
+              <tr class="modify">
                 <td class="count"></td>
                 <td>상세</td>
                 <td><a href="../vdConference/detail.html" target="_blank">vdConference/detail.html</a></td>
-                <td>완료</td>
+                <td>수정</td>
+              </tr>
+              <tr class="modify">
+                <td class="count"></td>
+                <td>생성</td>
+                <td><a href="../vdConference/create.html" target="_blank">vdConference/create.html</a></td>
+                <td>추가</td>
+              </tr>
+              <tr class="modify">
+                <td class="count"></td>
+                <td>수정&#47;삭제</td>
+                <td><a href="../vdConference/modify.html" target="_blank">vdConference/modify.html</a></td>
+                <td>추가</td>
               </tr>
               <tr>
                 <td class="count"></td>
-                <td rowspan="2">부스라이브</td>
+                <td rowspan="7">부스라이브</td>
                 <td>목록</td>
                 <td><a href="../booth/list.html" target="_blank">booth/list.html</a></td>
                 <td>완료</td>
+              </tr>
+              <tr class="modify">
+                <td class="count"></td>
+                <td>목록 관리(관리자)</td>
+                <td><a href="../booth/list_mgt.html" target="_blank">booth/list_mgt.html</a></td>
+                <td>추가</td>
               </tr>
               <tr>
                 <td class="count"></td>
@@ -127,11 +172,66 @@
                 <td><a href="../booth/detail.html" target="_blank">booth/detail.html</a></td>
                 <td>완료</td>
               </tr>
+              <tr class="modify">
+                <td class="count"></td>
+                <td>상세 관리(관리자)</td>
+                <td><a href="../booth/detail_mgt.html" target="_blank">booth/detail_mgt.html</a></td>
+                <td>추가</td>
+              </tr>
+              <tr class="modify">
+                <td class="count"></td>
+                <td>모니터링(관리자)</td>
+                <td><a href="../booth/monitoring.html" target="_blank">booth/monitoring.html</a></td>
+                <td>추가</td>
+              </tr>
+              <tr class="modify">
+                <td class="count"></td>
+                <td>생성</td>
+                <td><a href="../booth/create.html" target="_blank">booth/create.html</a></td>
+                <td>추가</td>
+              </tr>
+              <tr class="modify">
+                <td class="count"></td>
+                <td>수정&#47;삭제</td>
+                <td><a href="../booth/modify.html" target="_blank">booth/modify.html</a></td>
+                <td>추가</td>
+              </tr>
               <tr>
                 <td class="count"></td>
-                <td colspan="2">매치메이킹</td>
+                <td rowspan="6">매치메이킹</td>
+                <td>목록</td>
                 <td><a href="../match/list.html" target="_blank">match/list.html</a></td>
                 <td>완료</td>
+              </tr>
+              <tr class="modify">
+                <td class="count"></td>
+                <td>관리(관리자)</td>
+                <td><a href="../match/list_mgt.html" target="_blank">match/list_mgt.html</a></td>
+                <td>추가</td>
+              </tr>
+              <tr class="modify">
+                <td class="count"></td>
+                <td>상세</td>
+                <td><a href="../match/detail.html" target="_blank">match/detail.html</a></td>
+                <td>추가</td>
+              </tr>
+              <tr class="modify">
+                <td class="count"></td>
+                <td>등록</td>
+                <td><a href="../match/regist.html" target="_blank">match/regist.html</a></td>
+                <td>추가</td>
+              </tr>
+              <tr class="modify">
+                <td class="count"></td>
+                <td>수정&#47;삭제</td>
+                <td><a href="../match/modify.html" target="_blank">match/modify.html</a></td>
+                <td>추가</td>
+              </tr>
+              <tr class="modify">
+                <td class="count"></td>
+                <td>태그 목록</td>
+                <td><a href="../match/tag_list.html" target="_blank">match/tag_list.html</a></td>
+                <td>추가</td>
               </tr>
             </tbody>
           </table>

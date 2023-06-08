@@ -13,8 +13,6 @@
   <title>화상회의 상세 | MICE미팅프로그램</title>
   <script src="../assets/js/lib.js"></script>
   <script defer src="../assets/js/common.js"></script>
-
-  <link rel="stylesheet" href="../assets/css/jquery-ui.min.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 
 
@@ -381,6 +379,11 @@
                 <div class="settings pc-only">
                   <ul class="grid-wrap col-2-2">
                     <li class="grid-item">
+                      <button type="button" class="btn-default wide rounded bg-navy2 button-active-modal" data-modal-name="inviteConference">
+                        <em>회의 초대</em>
+                      </button>
+                    </li>
+                    <li class="grid-item">
                       <button type="button" class="btn-default wide rounded bg-navy2">
                         <em>방송시작 &middot; 종료</em>
                       </button>
@@ -401,7 +404,7 @@
                       </button>
                     </li>
                     <li class="grid-item">
-                      <button type="button" class="btn-default wide rounded bg-blueGray">
+                      <button type="button" class="btn-default wide rounded bg-blueGray button-active-modal" data-modal-name="viewConference">
                         <em>회의록 보기</em>
                       </button>
                     </li>
@@ -478,7 +481,9 @@
       <div class="modal-body">
         <div class="modal-title">
           <h5>2022 제 31회 국제천문연맹 총회 XXXIst General Assembly of International</h5>
-          <button type="button" class="btn-createSurvey bg-skyblue rounded"><em>투표 생성</em></button>
+          <button type="button" class="btn-createSurvey bg-skyblue rounded button-active-modal" data-modal-name="createSurvey">
+            <em>투표 생성</em>
+          </button>
         </div>
         <div class="modal-info">
           <dl>
@@ -499,10 +504,14 @@
                     <span>2022년 03월 07일 12시 30분 ~ 13시 30분</span>
                   </div>
                   <div class="btn-wrap">
-                    <button class="btn-vote wide bg-navy2 rounded"><em>투표하기</em></button>
+                    <button class="btn-vote wide bg-navy2 rounded button-active-modal" data-modal-name="voteSurvey">
+                      <em>투표하기</em>
+                    </button>
                   </div>
                   <div class="btn-wrap half">
-                    <button class="btn-result wide bg-orange rounded"><em>투표결과</em></button>
+                    <button class="btn-result wide bg-orange rounded button-active-modal" data-modal-name="voteResult">
+                      <em>투표결과</em>
+                    </button>
                     <button class="btn-modify wide bg-gray rounded"><em>수정</em></button>
                   </div>
                 </dd>
@@ -519,16 +528,257 @@
                     <span>2022년 03월 07일 12시 30분 ~ 13시 30분</span>
                   </div>
                   <div class="btn-wrap">
-                    <button class="btn-vote wide bg-navy2 rounded"><em>투표하기</em></button>
+                    <button class="btn-vote wide bg-navy2 rounded button-active-modal" data-modal-name="voteSurvey">
+                      <em>투표하기</em>
+                    </button>
                   </div>
                   <div class="btn-wrap half">
-                    <button class="btn-result wide bg-orange rounded"><em>투표결과</em></button>
+                    <button class="btn-result wide bg-orange rounded button-active-modal" data-modal-name="voteResult">
+                      <em>투표결과</em>
+                    </button>
                     <button class="btn-modify wide bg-gray rounded"><em>수정</em></button>
                   </div>
                 </dd>
               </dl>
             </li>
           </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 투표 생성 -->
+    <div class="modal type2 animate fast zoomOut" id="modal-createSurvey">
+      <div class="modal-header">
+        <h4><span>투표생성 및 수정</span></h4>
+        <button type="button" class="btn-close-modal"><em class="hidden-txt">레이어 팝업 닫기</em></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-info">
+          <dl>
+            <dt><span>웨비나</span></dt>
+            <dd><b>FRB의 다중 파장 연구 및 우주론적 사용</b></dd>
+          </dl>
+          <dl>
+            <dt><span>시간</span></dt>
+            <dd><em>13시 30분 ~ 15시 30분</em></dd>
+          </dl>
+        </div>
+        <div class="modal-contents">
+          <div class="info align-r">&nbsp;필수 입력 정보입니다.</div>
+          <div class="createSurvey">
+            <dl class="grid-wrap">
+              <dt><span class="est">질문</span></dt>
+              <dd>
+                <div class="text-wrap">
+                  <input type="text" value="참여자 혈액형 투표" />
+                </div>
+              </dd>
+              <dt><span class="est">선택</span></dt>
+              <dd>
+                <div class="radio-wrap">
+                  <span>
+                    <input type="radio" name="aa" id="onlyOne" />
+                    <label for="onlyOne"><em>단일 선택</em></label>
+                  </span>
+                  <span>
+                    <input type="radio" name="aa" id="both" />
+                    <label for="both"><em>복수 선택</em></label>
+                  </span>
+                </div>
+              </dd>
+              <dt><span class="est">항목</span></dt>
+              <dd>
+                <div class="list">
+                  <div class="text-wrap">
+                    <input type="text" value="O형" />
+                  </div>
+                  <div class="text-wrap">
+                    <input type="text" value="AB형" />
+                  </div>
+                  <div class="text-wrap">
+                    <input type="text" value="A형" />
+                  </div>
+                  <div class="text-wrap">
+                    <input type="text" value="B형" />
+                  </div>
+                  <div class="text-wrap">
+                    <input type="text" value="RH -형" />
+                  </div>
+                </div>
+                <div class="btn-wrap grid-wrap">
+                  <button type="button" class="btn-deleteList rounded bg-blueGray"><em>항목 삭제</em></button>
+                  <button type="button" class="btn-deleteList rounded bg-orange"><em>항목 추가</em></button>
+                </div>
+              </dd>
+            </dl>
+            <div class="btn-wrap triple align-c">
+              <button type="button" class="btn-cancle wide rounded bg-gray"><em>취소</em></button>
+              <button type="button" class="btn-modify wide rounded bg-navy"><em>수정</em></button>
+              <button type="button" class="btn-delete wide rounded bg-blueGray"><em>삭제</em></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 투표 하기 -->
+    <div class="modal type2 animate fast zoomOut" id="modal-voteSurvey">
+      <div class="modal-header">
+        <h4><span>투표하기</span></h4>
+        <button type="button" class="btn-close-modal"><em class="hidden-txt">레이어 팝업 닫기</em></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-info">
+          <dl>
+            <dt><span>웨비나</span></dt>
+            <dd><b>FRB의 다중 파장 연구 및 우주론적 사용</b></dd>
+          </dl>
+          <dl>
+            <dt><span>시간</span></dt>
+            <dd><em>13시 30분 ~ 15시 30분</em></dd>
+          </dl>
+        </div>
+        <div class="modal-contents">
+          <dl class="voteList">
+            <dt><b>Q. 참여자 혈액형 투표</b></dt>
+            <dd>
+              <ul class="grid-wrap gap10">
+                <li>
+                  <div class="radio-wrap flex--wrap center edge">
+                    <span>
+                      <input type="radio" name="vote" id="list1" />
+                      <label for="list1"></label>
+                    </span>
+                    <span class="text-wrap">
+                      <input type="text" value="O형" readonly />
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <div class="radio-wrap flex--wrap center edge">
+                    <span>
+                      <input type="radio" name="vote" id="list2" />
+                      <label for="list2"></label>
+                    </span>
+                    <span class="text-wrap">
+                      <input type="text" value="AB형" readonly />
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <div class="radio-wrap flex--wrap center edge">
+                    <span>
+                      <input type="radio" name="vote" id="list3" />
+                      <label for="list3"></label>
+                    </span>
+                    <span class="text-wrap">
+                      <input type="text" value="A형" readonly />
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <div class="radio-wrap flex--wrap center edge">
+                    <span>
+                      <input type="radio" name="vote" id="list4" />
+                      <label for="list4"></label>
+                    </span>
+                    <span class="text-wrap">
+                      <input type="text" value="B형" readonly />
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <div class="radio-wrap flex--wrap center edge">
+                    <span>
+                      <input type="radio" name="vote" id="list5" />
+                      <label for="list5"></label>
+                    </span>
+                    <span class="text-wrap">
+                      <input type="text" value="RH-형" readonly />
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+          <div class="btn-wrap align-c">
+            <button type="button" class="btn-modify wide rounded bg-navy"><em>제출하기</em></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 투표 결과 -->
+    <div class="modal type2 animate fast zoomOut" id="modal-voteResult">
+      <div class="modal-header">
+        <h4><span>투표결과</span></h4>
+        <button type="button" class="btn-close-modal"><em class="hidden-txt">레이어 팝업 닫기</em></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-info">
+          <dl>
+            <dt><span>웨비나</span></dt>
+            <dd><b>FRB의 다중 파장 연구 및 우주론적 사용</b></dd>
+          </dl>
+          <dl>
+            <dt><span>시간</span></dt>
+            <dd><em>13시 30분 ~ 15시 30분</em></dd>
+          </dl>
+        </div>
+        <div class="modal-contents">
+          <dl class="voteResult">
+            <dt>
+              <b>Q. 참여자 혈액형 투표</b>
+              <span>참여 <b>74</b>명</span>
+            </dt>
+            <dd>
+              <ul class="grid-wrap gap10">
+                <li>
+                  <div class="chart flex--wrap center">
+                    <span class="data flex--wrap center"><b>O형</b></span>
+                    <em class="count">23</em>
+                    <em class="total hidden-txt">74</em>
+                    <b class="percentage"></b>
+                  </div>
+                </li>
+                <li>
+                  <div class="chart flex--wrap center">
+                    <span class="data flex--wrap center"><b>AB형</b></span>
+                    <em class="count">14</em>
+                    <em class="total hidden-txt">74</em>
+                    <b class="percentage"></b>
+                  </div>
+                </li>
+                <li>
+                  <div class="chart flex--wrap center">
+                    <span class="data flex--wrap center"><b>A형</b></span>
+                    <em class="count">17</em>
+                    <em class="total hidden-txt">74</em>
+                    <b class="percentage"></b>
+                  </div>
+                </li>
+                <li>
+                  <div class="chart flex--wrap center">
+                    <span class="data flex--wrap center"><b>B형</b></span>
+                    <em class="count">19</em>
+                    <em class="total hidden-txt">74</em>
+                    <b class="percentage"></b>
+                  </div>
+                </li>
+                <li>
+                  <div class="chart flex--wrap center">
+                    <span class="data flex--wrap center"><b>RH-형</b></span>
+                    <em class="count">1</em>
+                    <em class="total hidden-txt">74</em>
+                    <b class="percentage"></b>
+                  </div>
+                </li>
+              </ul>
+            </dd>
+          </dl>
         </div>
       </div>
     </div>
@@ -608,6 +858,100 @@
                   <button type="button" class="btn-save bg-navy2 rounded"><em>저장</em></button>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 회의록 보기 -->
+    <div class="modal type2 animate fast zoomOut" id="modal-viewConference">
+      <div class="modal-header">
+        <h4><span>회의록 상세</span></h4>
+        <button type="button" class="btn-close-modal"><em class="hidden-txt">레이어 팝업 닫기</em></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-info">
+          <dl>
+            <dt><span>웨비나</span></dt>
+            <dd><b>FRB의 다중 파장 연구 및 우주론적 사용</b></dd>
+          </dl>
+          <dl>
+            <dt><span>시간</span></dt>
+            <dd><em>13시 30분 ~ 15시 30분</em></dd>
+          </dl>
+        </div>
+        <div class="modal-contents">
+          <div class="viewRecord">
+            <div class="recordItem flex--wrap">
+              <div class="flex--wrap center">
+                <i class="icon icon-time"><em class="hidden-txt">시간</em></i>
+                <span>2022-11-01 13시 31분</span>
+              </div>
+              <p>회의록 시작합니다.</p>
+            </div>
+            <div class="recordItem flex--wrap">
+              <div class="flex--wrap center">
+                <i class="icon icon-time"><em class="hidden-txt">시간</em></i>
+                <span>2022-11-01 13시 32분</span>
+              </div>
+              <p>홍길동님이 제품정보 파일 공유를 요청 하여 공유 함</p>
+            </div>
+            <div class="recordItem flex--wrap">
+              <div class="flex--wrap center">
+                <i class="icon icon-time"><em class="hidden-txt">시간</em></i>
+                <span>2022-11-01 13시 33분</span>
+              </div>
+              <p>홍길동님이 회의에 대해 의견을 제시함</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 회의 초대 -->
+    <div class="modal type2 animate fast zoomOut" id="modal-inviteConference">
+      <div class="modal-header">
+        <h4><span>회의 초대장</span></h4>
+        <button type="button" class="btn-close-modal"><em class="hidden-txt">레이어 팝업 닫기</em></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-contents">
+          <div class="info align-r">&nbsp;필수 입력 정보입니다.</div>
+          <div class="inviteConference">
+            <dl class="grid-wrap">
+              <dt><span class="est">회원찾기</span></dt>
+              <dd>
+                <div class="text-wrap has-button">
+                  <input type="text" placeholder="회원아이디 또는 닉네임을 입력해주세요." />
+                  <div class="btn-wrap inline">
+                    <button class="btn-search bg-navy2 rounded"><em>회원검색</em></button>
+                  </div>
+                </div>
+              </dd>
+              <dt><span class="est">이메일</span></dt>
+              <dd>
+                <div class="text-wrap e_mail">
+                  <input type="text" placeholder="ID를 입력해주세요." />
+                </div>
+                <div class="select-wrap">
+                  <label for="mail"><em class="hidden-txt">이메일</em></label>
+                  <select name="" id="mail">
+                    <option selected>naver.com</option>
+                  </select>
+                </div>
+              </dd>
+              <dt><span class="est">초대 내용</span></dt>
+              <dd>
+                <div class="text-wrap">
+                  <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+              </dd>
+            </dl>
+            <div class="btn-wrap half align-c">
+              <button type="button" class="btn-invite wide rounded bg-navy"><em>초대하기</em></button>
             </div>
           </div>
         </div>

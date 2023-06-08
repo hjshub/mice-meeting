@@ -106,6 +106,10 @@ gb.CommonFunction = (function () {
         height: '100vh',
         'overflow-y': 'hidden',
       });
+
+      if (modalName === 'voteResult') {
+        chartOn();
+      }
     });
 
     $(document).on('click', '.btn-close-modal', () => {
@@ -214,6 +218,19 @@ gb.CommonFunction = (function () {
       minDate: 'd',
     });
   };
+  const createTimePicker = function () {
+    $('.time > input[type=text]').timepicker({
+      timeFormat: 'hh:mm p',
+      interval: 10,
+      minTime: '00:00',
+      maxTime: '23:50',
+      defaultTime: '00:00',
+      startTime: '00:00',
+      dynamic: false,
+      dropdown: true,
+      scrollbar: true,
+    });
+  };
   const openSide = function () {
     const buttonOpenSideCts = document.getElementsByClassName('btn-openSideCts');
     const buttonOffSideCts = document.getElementsByClassName('btn-offSideCts');
@@ -289,12 +306,31 @@ gb.CommonFunction = (function () {
       });
     });
   };
+  const chartOn = () => {
+    const chart = document.querySelectorAll('.chart');
+    chart.forEach(function (el) {
+      const data = el.children[0];
+      const count = el.children[1].innerText;
+      const total = el.children[2].innerText;
+      const percentage = ((count / total) * 100).toFixed();
+      gsap.fromTo(data, { width: 0 }, { width: `${percentage}%`, delay: 0.3, duration: 0.4 });
+
+      for (let i = 0; i <= percentage; i++) {
+        (function (n) {
+          setTimeout(function () {
+            el.lastElementChild.innerHTML = `${i}%`;
+          }, n * 20);
+        })(i);
+      }
+    });
+  };
   const init = () => {
     setGnb();
     modalOn();
-    createCalendar();
     openSide();
     checkAll();
+    //createCalendar();
+    //createTimePicker();
     //vdPlay();
   };
 
@@ -329,11 +365,11 @@ function setCookie(cName, cValue, cDay) {
 function getCookie(cName) {
   cName = cName + '=';
   const cookieData = document.cookie;
-  const start = cookieData.indexOf(cName);
-  const cValue = '';
+  let start = cookieData.indexOf(cName);
+  let cValue = '';
   if (start != -1) {
     start += cName.length;
-    const end = cookieData.indexOf(';', start);
+    let end = cookieData.indexOf(';', start);
     if (end == -1) end = cookieData.length;
     cValue = cookieData.substring(start, end);
   }

@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 
 
-  <title>웨비나 목록 | MICE미팅프로그램</title>
+  <title>부스라이브 관리 | MICE미팅프로그램</title>
   <script src="../assets/js/lib.js"></script>
   <script defer src="../assets/js/common.js"></script>
   <link rel="stylesheet" href="../assets/css/style.css" />
@@ -128,7 +128,7 @@
 
     <!-- #contents -->
     <main id="contents">
-      <h1 class="hidden-txt">미팅프로그램 - 웨비나</h1>
+      <h1 class="hidden-txt">미팅프로그램 - 부스라이브 관리</h1>
 
       <!-- 상단 배너 -->
       <section class="top-bnr">
@@ -142,35 +142,27 @@
       <section class="contents">
         <nav class="tab-menu">
           <ul>
-            <li class="on"><a href="../webina/list.html">웨비나</a></li>
+            <li><a href="../webina/list.html">웨비나</a></li>
             <li><a href="../vdConference/list.html">화상회의</a></li>
-            <li><a href="../booth/list.html">부스라이브</a></li>
+            <li class="on"><a href="../booth/list.html">부스라이브</a></li>
             <li><a href="../match/list.html">매치메이킹</a></li>
           </ul>
         </nav>
         <div class="cts-wrap">
           <header class="cts-header tit">
-            <h3>웨비나</h3>
+            <h3>부스라이브 관리</h3>
           </header>
           <div class="cts-body">
             <div class="container">
               <div class="sub-tit">
                 <h4>2022 제 31회 국제천문연맹 총회 XXXIst General Assembly of International</h4>
+                <div class="btn-wrap inline">
+                  <button class="btn-createLive lg bg-skyblue rounded"><em>부스라이브 생성</em></button>
+                </div>
               </div>
               <div class="filter-wrap">
                 <div><strong>총 300건</strong></div>
                 <div>
-                  <dl>
-                    <dt><b>날짜</b></dt>
-                    <dd>
-                      <div class="text-wrap calendar both">
-                        <input type="text" inputmode="none" />
-                      </div>
-                      <div class="text-wrap calendar both">
-                        <input type="text" inputmode="none" />
-                      </div>
-                    </dd>
-                  </dl>
                   <dl>
                     <dt><b>장소</b></dt>
                     <dd>
@@ -183,10 +175,16 @@
                     </dd>
                   </dl>
                   <dl class="wide">
-                    <dt><b>검색</b></dt>
+                    <dt><b>상태</b></dt>
                     <dd>
+                      <div class="select-wrap">
+                        <label for="selectStatus"><em class="hidden-txt">상태 선택</em></label>
+                        <select name="" id="selectStatus">
+                          <option value="" selected>전체</option>
+                        </select>
+                      </div>
                       <div class="text-wrap has-button">
-                        <input type="text" placeholder="발표자, 업체명, 제목 검색" />
+                        <input type="text" placeholder="부스번호, 부스, 업체 검색" />
                         <div class="btn-wrap inline">
                           <button class="btn-search bg-navy2 rounded"><em>검색</em></button>
                         </div>
@@ -200,68 +198,100 @@
               <div class="tblStyle pc-only">
                 <table>
                   <caption>
-                    웨비나(순번, 날짜, 제목, 상태, 장소, 발표자로 구성된 표)
+                    부스라이브 관리(부스번호, 부스명(업체명), 장소, 부스 담당자, 메뉴로 구성된 표)
                   </caption>
                   <colgroup>
                     <col style="width: 10%" />
-                    <col style="width: 20%" />
                     <col style="width: auto" />
                     <col style="width: 10%" />
                     <col style="width: 15%" />
-                    <col style="width: 10%" />
+                    <col style="width: 15%" />
                   </colgroup>
                   <thead>
                     <tr>
-                      <th scope="col">순번</th>
-                      <th scope="col">날짜</th>
-                      <th scope="col">제목</th>
-                      <th scope="col">상태</th>
+                      <th scope="col">부스번호</th>
+                      <th scope="col">부스명<em>(업체명)</em></th>
                       <th scope="col">장소</th>
-                      <th scope="col">발표자</th>
+                      <th scope="col">부스 담당자</th>
+                      <th scope="col">메뉴</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td><span>15</span></td>
-                      <td><span>2022.01.03 09시 00분 ~ 14시 30분</span></td>
+                      <td><span>A015</span></td>
                       <td class="tit">
-                        <span>
-                          <a href="./detail.html">
-                            FRB의 다중 파장 연구 및 우주론적 사용파장 연구 및 우주론적 사용우주론적 사용
-                          </a>
-                        </span>
+                        <b class="mgt">
+                          <a href="./detail.html">천문학연구소</a>
+                          <em class="txt-color skyblue">(라이브)</em>
+                        </b>
                       </td>
-                      <td><span class="txt-color orange">대기</span></td>
                       <td><span>부산 벡스코 A관</span></td>
-                      <td><span>PCN</span></td>
+                      <td><span>홍길동 팀장</span></td>
+                      <td>
+                        <div class="grid-wrap col-2 gap10">
+                          <button class="btn-monitoring bg-green auto rounded"><em>모니터링</em></button>
+                          <button class="btn-liveMgt bg-blueGray auto rounded"><em>라이브 관리</em></button>
+                        </div>
+                      </td>
                     </tr>
                     <tr>
-                      <td><span>14</span></td>
-                      <td><span>2022.01.03 09시 00분 ~ 14시 30분</span></td>
+                      <td><span>A014</span></td>
                       <td class="tit">
-                        <span>
-                          <a href="./detail.html">
-                            FRB의 다중 파장 연구 및 우주론적 사용파장 연구 및 우주론적 사용우주론적 사용
-                          </a>
-                        </span>
+                        <b class="mgt">
+                          <a href="./detail.html">기상청</a>
+                          <em class="txt-color skyblue">(라이브)</em>
+                        </b>
                       </td>
-                      <td><span class="txt-color skyblue">진행중</span></td>
                       <td><span>부산 벡스코 B관</span></td>
-                      <td><span>PCN</span></td>
+                      <td><span>홍길동 팀장</span></td>
+                      <td>
+                        <div class="grid-wrap col-2 gap10">
+                          <button class="btn-monitoring bg-green auto rounded"><em>모니터링</em></button>
+                          <button class="btn-liveMgt bg-blueGray auto rounded"><em>라이브 관리</em></button>
+                        </div>
+                      </td>
                     </tr>
                     <tr>
-                      <td><span>13</span></td>
-                      <td><span>2022.01.03 09시 00분 ~ 14시 30분</span></td>
+                      <td><span>A013</span></td>
                       <td class="tit">
-                        <span>
-                          <a href="./detail.html">
-                            FRB의 다중 파장 연구 및 우주론적 사용파장 연구 및 우주론적 사용우주론적 사용
-                          </a>
+                        <span class="mgt">
+                          <a href="./detail.html">GPS 시스템 - 위성관제시스템 사업부</a>
+                          <em>(중지)</em>
                         </span>
                       </td>
-                      <td><span>종료</span></td>
                       <td><span>부산 벡스코 D관</span></td>
-                      <td><span>PCN</span></td>
+                      <td><span>홍길동 팀장</span></td>
+                      <td>
+                        <button class="btn-liveMgt bg-blueGray rounded"><em>라이브 관리</em></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span>A012</span></td>
+                      <td class="tit">
+                        <span class="mgt">
+                          <a href="./detail.html">GPS 시스템 - 위성관제시스템 사업부 2</a>
+                          <em>(중지)</em>
+                        </span>
+                      </td>
+                      <td><span>부산 벡스코 A관</span></td>
+                      <td><span>홍길동 팀장</span></td>
+                      <td>
+                        <button class="btn-liveMgt bg-blueGray rounded"><em>라이브 관리</em></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span>A011</span></td>
+                      <td class="tit">
+                        <span class="mgt">
+                          <a href="./detail.html">GPS 시스템 - 위성관제시스템 사업부 3GPS 시스템 - 위성관제시스템 사업부 3</a>
+                          <em>(중지)</em>
+                        </span>
+                      </td>
+                      <td><span>부산 벡스코 A관</span></td>
+                      <td><span>홍길동 팀장</span></td>
+                      <td>
+                        <button class="btn-liveMgt bg-blueGray rounded"><em>라이브 관리</em></button>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -272,63 +302,104 @@
                   <li>
                     <div class="tit">
                       <b>
-                        <a href="./detail.html">FRB의 다중 파장 연구 및 우주론적 사용파장 연구 및 우주론적 사용우주론적 사용
-                        </a>
+                        <a href="./detail.html">천문학연구소</a>
                       </b>
                     </div>
                     <dl>
                       <dt>상태</dt>
-                      <dd><span class="txt-color orange">대기</span></dd>
+                      <dd><span class="txt-color skyblue">라이브</span></dd>
                       <dt>장소</dt>
                       <dd>부산 벡스코 A관</dd>
-                      <dt>발표자</dt>
-                      <dd>PCN</dd>
                     </dl>
                     <dl>
-                      <dt>날짜</dt>
-                      <dd>2022.01.03 09시 00분 ~ 14시 30분</dd>
+                      <dt>부스 담당자</dt>
+                      <dd>홍길동 팀장</dd>
                     </dl>
+                    <div class="btn-wrap">
+                      <button class="btn-monitoring bg-green rounded"><em>모니터링</em></button>
+                      <button class="btn-liveMgt bg-blueGray rounded"><em>라이브 관리</em></button>
+                    </div>
                   </li>
                   <li>
                     <div class="tit">
                       <b>
-                        <a href="./detail.html">FRB의 다중 파장 연구 및 우주론적 사용파장 연구 및 우주론적 사용우주론적 사용
-                        </a>
+                        <a href="./detail.html">기상청</a>
                       </b>
                     </div>
                     <dl>
                       <dt>상태</dt>
-                      <dd><span class="txt-color skyblue">진행중</span></dd>
+                      <dd><span class="txt-color skyblue">라이브</span></dd>
                       <dt>장소</dt>
                       <dd>부산 벡스코 B관</dd>
-                      <dt>발표자</dt>
-                      <dd>PCN</dd>
                     </dl>
                     <dl>
-                      <dt>날짜</dt>
-                      <dd>2022.01.03 09시 00분 ~ 14시 30분</dd>
+                      <dt>부스 담당자</dt>
+                      <dd>홍길동 팀장</dd>
                     </dl>
+                    <div class="btn-wrap">
+                      <button class="btn-monitoring bg-green rounded"><em>모니터링</em></button>
+                      <button class="btn-liveMgt bg-blueGray rounded"><em>라이브 관리</em></button>
+                    </div>
                   </li>
                   <li>
                     <div class="tit">
-                      <b>
-                        <a href="./detail.html">
-                          FRB의 다중 파장 연구 및 우주론적 사용파장 연구 및 우주론적 사용우주론적 사용
-                        </a>
-                      </b>
+                      <span>
+                        <a href="./detail.html">GPS 시스템 - 위성관제시스템 사업부</a>
+                      </span>
                     </div>
                     <dl>
                       <dt>상태</dt>
-                      <dd><span>종료</span></dd>
+                      <dd><span>중지</span></dd>
                       <dt>장소</dt>
                       <dd>부산 벡스코 D관</dd>
-                      <dt>발표자</dt>
-                      <dd>PCN</dd>
                     </dl>
                     <dl>
-                      <dt>날짜</dt>
-                      <dd>2022.01.03 09시 00분 ~ 14시 30분</dd>
+                      <dt>부스 담당자</dt>
+                      <dd>홍길동 팀장</dd>
                     </dl>
+                    <div class="btn-wrap">
+                      <button class="btn-liveMgt bg-blueGray rounded"><em>라이브 관리</em></button>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="tit">
+                      <span>
+                        <a href="./detail.html">GPS 시스템 - 위성관제시스템 사업부 2</a>
+                      </span>
+                    </div>
+                    <dl>
+                      <dt>상태</dt>
+                      <dd><span>중지</span></dd>
+                      <dt>장소</dt>
+                      <dd>부산 벡스코 A관</dd>
+                    </dl>
+                    <dl>
+                      <dt>부스 담당자</dt>
+                      <dd>홍길동 팀장</dd>
+                    </dl>
+                    <div class="btn-wrap">
+                      <button class="btn-liveMgt bg-blueGray rounded"><em>라이브 관리</em></button>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="tit">
+                      <span>
+                        <a href="./detail.html">GPS 시스템 - 위성관제시스템 사업부 3GPS 시스템 - 위성관제시스템 사업부 3</a>
+                      </span>
+                    </div>
+                    <dl>
+                      <dt>상태</dt>
+                      <dd><span>중지</span></dd>
+                      <dt>장소</dt>
+                      <dd>부산 벡스코 A관</dd>
+                    </dl>
+                    <dl>
+                      <dt>부스 담당자</dt>
+                      <dd>홍길동 팀장</dd>
+                    </dl>
+                    <div class="btn-wrap">
+                      <button class="btn-liveMgt bg-blueGray rounded"><em>라이브 관리</em></button>
+                    </div>
                   </li>
                 </ul>
               </div>

@@ -20,9 +20,30 @@
       width: -webkit-calc((100% - 10px) / 2) !important;
       width: -moz-calc((100% - 10px) / 2) !important;
       width: calc((100% - 10px) / 2) !important;
+      max-width: 206px;
 
       @include _bp(480px) {
         width: 100% !important;
+        max-width: none;
+
+        & + button {
+          margin-left: 0;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  &.triple {
+    button {
+      width: -webkit-calc((100% - 20px) / 3) !important;
+      width: -moz-calc((100% - 20px) / 3) !important;
+      width: calc((100% - 20px) / 3) !important;
+      max-width: 206px;
+
+      @include _bp(480px) {
+        width: 100% !important;
+        max-width: none;
 
         & + button {
           margin-left: 0;
@@ -94,6 +115,11 @@ button {
       }
     }
 
+    &.auto {
+      min-width: auto;
+      margin: 0;
+    }
+
     &.rounded {
       border-radius: 5px;
     }
@@ -112,6 +138,10 @@ button {
     }
     &.bg-blueGray {
       background-color: $blueGray;
+      color: $white;
+    }
+    &.bg-navy {
+      background-color: $navy;
       color: $white;
     }
     &.bg-navy2 {
@@ -185,6 +215,10 @@ button {
         margin-right: 10px;
         vertical-align: bottom;
         content: '';
+
+        @include _bp(821px) {
+          margin-right: 5px;
+        }
       }
     }
   }
@@ -199,6 +233,12 @@ button {
   border: none;
   vertical-align: baseline;
   font-size: 0;
+
+  option {
+    &.default {
+      display: none !important;
+    }
+  }
 
   label {
     position: absolute;
@@ -245,7 +285,7 @@ button {
 
   &.md {
     select {
-      width: 200px;
+      width: 210px;
     }
   }
 
@@ -256,6 +296,10 @@ button {
       margin-left: 0;
       margin-top: 10px;
     }
+  }
+
+  & + .select-wrap {
+    margin-left: 10px;
   }
 }
 
@@ -273,11 +317,16 @@ button {
     font-size: 1.4rem;
     color: $gray3;
     background-color: $white;
-    border-radius: 0;
     box-shadow: none;
     height: 34px;
     border: 1px solid #ccc;
     border-radius: 5px;
+
+    &:read-only {
+      background-color: #f7f7f7;
+      border: none;
+      pointer-events: none;
+    }
   }
 
   textarea {
@@ -285,9 +334,10 @@ button {
     padding: 10px;
     font-size: 1.6rem;
     border: 1px solid #ccc;
-    border-radius: 0;
+    border-radius: 5px;
     box-shadow: none;
-    resize: vertical;
+    resize: none;
+    color: $gray3;
   }
 
   &.has-button {
@@ -411,10 +461,21 @@ button {
     width: 130px;
     position: relative;
 
+    &.md {
+      width: 100%;
+      max-width: 210px;
+    }
+
+    &.both {
+      @include _bp(561px) {
+        width: -webkit-calc((100% - 30px) / 2);
+        width: -moz-calc((100% - 30px) / 2);
+        width: calc((100% - 30px) / 2);
+      }
+    }
+
     @include _bp(561px) {
-      width: -webkit-calc((100% - 30px) / 2);
-      width: -moz-calc((100% - 30px) / 2);
-      width: calc((100% - 30px) / 2);
+      width: 100%;
     }
 
     input[type='text'] {
@@ -448,10 +509,94 @@ button {
       }
     }
   }
+
+  &.time {
+    width: 130px;
+    position: relative;
+
+    &.md {
+      width: 100%;
+      max-width: 210px;
+    }
+
+    &.both {
+      width: -webkit-calc((100% - 30px) / 2);
+      width: -moz-calc((100% - 30px) / 2);
+      width: calc((100% - 30px) / 2);
+    }
+
+    input[type='text'] {
+      padding-right: 37px;
+    }
+
+    &::after {
+      @include icon;
+      @include icon-time;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      pointer-events: none;
+      content: '';
+    }
+
+    & + .time {
+      margin-left: 30px;
+
+      &::before {
+        position: absolute;
+        width: 30px;
+        top: 50%;
+        left: -30px;
+        text-align: center;
+        color: $gray3;
+        font-weight: 700;
+        font-size: 2rem;
+        @include transform(translateY(-50%));
+        content: '~';
+      }
+    }
+  }
+
+  &.e_mail {
+    &,
+    & + .select-wrap {
+      width: 100%;
+      max-width: 210px;
+
+      @include _bp(561px) {
+        width: -webkit-calc((100% - 30px) / 2);
+        width: -moz-calc((100% - 30px) / 2);
+        width: calc((100% - 30px) / 2);
+      }
+    }
+
+    & + .select-wrap {
+      margin-left: 30px;
+
+      select {
+        @include _bp(561px) {
+          min-width: auto;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: -30px;
+        line-height: 1;
+        font-size: 1.6rem;
+        @include transform(translate(50%, -50%));
+        content: '@';
+      }
+    }
+  }
 }
 
 /*radio*/
 .radio-wrap {
+  width: 100%;
+  display: inline-block;
+
   span {
     display: inline-block;
     font-size: 0;
@@ -509,6 +654,10 @@ button {
           display: inline-block;
           line-height: 1;
           font-size: 1.7rem;
+          vertical-align: top;
+          margin-left: 10px;
+          margin-top: -1px;
+          color: $gray3;
         }
       }
 
@@ -531,6 +680,26 @@ button {
     }
 
     & + span {
+      margin-left: 20px;
+
+      &.text-wrap {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &.has-button {
+    width: -webkit-calc(100% - 140px);
+    width: -moz-calc(100% - 140px);
+    width: calc(100% - 140px);
+
+    @include _bp(821px) {
+      width: -webkit-calc(100% - 100px);
+      width: -moz-calc(100% - 100px);
+      width: calc(100% - 100px);
+    }
+
+    & + .btn-wrap {
       margin-left: 10px;
     }
   }
@@ -826,6 +995,46 @@ button {
 [class*='tblStyle'] {
   border-top: 2px solid $navy;
 
+  &.scrollable {
+    overflow: hidden;
+    overflow-x: auto;
+
+    table {
+      min-width: 821px;
+    }
+  }
+
+  &.type-2 {
+    border-top: none;
+
+    table {
+      th {
+        background-color: #fafafa;
+        b {
+          font-size: 1.6rem;
+        }
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 12px 10px;
+        border-color: #e8e8e8;
+        font-size: 0;
+
+        span {
+          font-size: 1.6rem;
+          color: $gray3;
+        }
+      }
+      tr:first-of-type {
+        th,
+        td {
+          border-top-width: 1px;
+        }
+      }
+    }
+  }
+
   table {
     text-align: center;
     width: 100%;
@@ -888,8 +1097,21 @@ button {
         b {
           width: 100%;
 
+          &.mgt {
+            a {
+              max-width: -webkit-calc(100% - 60px);
+              max-width: -moz-calc(100% - 60px);
+              max-width: calc(100% - 60px);
+            }
+          }
+
           a {
             @include ellipsis;
+          }
+
+          em {
+            font-weight: 500;
+            color: $gray3;
           }
         }
 
@@ -1001,11 +1223,15 @@ button {
     }
   }
 
-  .btn-wrap {
+  .btn-wrap:not(.inline) {
     margin-top: 50px;
 
     @include _bp(821px) {
       margin-top: 20px;
     }
+  }
+
+  & + .btn-wrap {
+    margin-top: 30px;
   }
 }

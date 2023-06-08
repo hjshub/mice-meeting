@@ -183,13 +183,25 @@ textarea {
     content: '';
   }
 }
+.info {
+  font-size: 1.4rem;
+  color: $gray2;
+  line-height: 1.4;
+  margin-top: 60px;
+  padding-bottom: 10px;
+
+  &::before {
+    content: '*';
+    color: $orange;
+  }
+}
 .est {
-  text-indent: 7px;
   line-height: 1.4;
 
   &::after {
     content: '*';
-    color: $red;
+    margin-left: 3px;
+    color: $orange;
   }
 }
 .bx-left {
@@ -758,6 +770,10 @@ main {
           height: 350px;
           padding-top: 90px;
         }
+
+        & + .btn-wrap {
+          margin-top: 100px;
+        }
       }
     }
 
@@ -1023,6 +1039,44 @@ main {
             }
           }
 
+          .ctrl-box {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            @include _bp(1280px) {
+              position: static;
+              margin-top: 20px;
+              order: 4;
+            }
+
+            @include _bp(480px) {
+              flex-direction: column;
+              -ms-flex-direction: column;
+            }
+
+            .select-wrap {
+              @include _bp(480px) {
+                width: 100%;
+
+                select {
+                  width: 100%;
+                }
+              }
+            }
+
+            .btn-wrap {
+              width: 422px;
+              margin-left: 10px;
+
+              @include _bp(480px) {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 10px;
+              }
+            }
+          }
+
           .vdSet {
             position: absolute;
             top: 0;
@@ -1215,6 +1269,10 @@ main {
               color: #0069ca;
               font-weight: 600;
             }
+          }
+
+          & + .btn-wrap {
+            margin-top: 30px;
           }
         }
       }
@@ -1484,9 +1542,25 @@ main {
 .flex--wrap {
   @include display-flex;
 
+  &.inline {
+    @include display-inlineFlex;
+  }
+
   &.column {
     flex-direction: column;
     -ms-flex-direction: column;
+  }
+
+  &.center {
+    @include align-items('center');
+  }
+
+  &.end {
+    @include align-items('flex-end');
+  }
+
+  &.edge {
+    @include justify-content('space-between');
   }
 }
 
@@ -1548,6 +1622,16 @@ main {
   &.gap-none {
     column-gap: 0;
     row-gap: 0;
+  }
+
+  &.gap10 {
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+
+  &.gap20 {
+    column-gap: 20px;
+    row-gap: 20px;
   }
 
   .grid-item {

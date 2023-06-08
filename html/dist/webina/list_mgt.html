@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 
 
-  <title>웨비나 목록 | MICE미팅프로그램</title>
+  <title>웨비나 관리 | MICE미팅프로그램</title>
   <script src="../assets/js/lib.js"></script>
   <script defer src="../assets/js/common.js"></script>
   <link rel="stylesheet" href="../assets/css/style.css" />
@@ -128,7 +128,7 @@
 
     <!-- #contents -->
     <main id="contents">
-      <h1 class="hidden-txt">미팅프로그램 - 웨비나</h1>
+      <h1 class="hidden-txt">미팅프로그램 - 웨비나 관리</h1>
 
       <!-- 상단 배너 -->
       <section class="top-bnr">
@@ -150,12 +150,15 @@
         </nav>
         <div class="cts-wrap">
           <header class="cts-header tit">
-            <h3>웨비나</h3>
+            <h3>웨비나 관리</h3>
           </header>
           <div class="cts-body">
             <div class="container">
               <div class="sub-tit">
                 <h4>2022 제 31회 국제천문연맹 총회 XXXIst General Assembly of International</h4>
+                <div class="btn-wrap inline">
+                  <button class="btn-createWebina lg bg-skyblue rounded"><em>웨비나 생성</em></button>
+                </div>
               </div>
               <div class="filter-wrap">
                 <div><strong>총 300건</strong></div>
@@ -163,10 +166,7 @@
                   <dl>
                     <dt><b>날짜</b></dt>
                     <dd>
-                      <div class="text-wrap calendar both">
-                        <input type="text" inputmode="none" />
-                      </div>
-                      <div class="text-wrap calendar both">
+                      <div class="text-wrap calendar">
                         <input type="text" inputmode="none" />
                       </div>
                     </dd>
@@ -208,16 +208,16 @@
                     <col style="width: auto" />
                     <col style="width: 10%" />
                     <col style="width: 15%" />
-                    <col style="width: 10%" />
+                    <col style="width: 8%" />
                   </colgroup>
                   <thead>
                     <tr>
                       <th scope="col">순번</th>
                       <th scope="col">날짜</th>
                       <th scope="col">제목</th>
-                      <th scope="col">상태</th>
                       <th scope="col">장소</th>
                       <th scope="col">발표자</th>
+                      <th scope="col">메뉴</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -225,43 +225,58 @@
                       <td><span>15</span></td>
                       <td><span>2022.01.03 09시 00분 ~ 14시 30분</span></td>
                       <td class="tit">
-                        <span>
+                        <span class="mgt">
                           <a href="./detail.html">
                             FRB의 다중 파장 연구 및 우주론적 사용파장 연구 및 우주론적 사용우주론적 사용
                           </a>
+                          <em class="txt-color orange">(대기)</em>
                         </span>
                       </td>
-                      <td><span class="txt-color orange">대기</span></td>
                       <td><span>부산 벡스코 A관</span></td>
                       <td><span>PCN</span></td>
+                      <td>
+                        <div class="grid-wrap">
+                          <button class="btn-monitoring bg-green auto rounded"><em>모니터링</em></button>
+                        </div>
+                      </td>
                     </tr>
                     <tr>
                       <td><span>14</span></td>
                       <td><span>2022.01.03 09시 00분 ~ 14시 30분</span></td>
                       <td class="tit">
-                        <span>
+                        <span class="mgt">
                           <a href="./detail.html">
                             FRB의 다중 파장 연구 및 우주론적 사용파장 연구 및 우주론적 사용우주론적 사용
                           </a>
+                          <em class="txt-color skyblue">(진행중)</em>
                         </span>
                       </td>
-                      <td><span class="txt-color skyblue">진행중</span></td>
                       <td><span>부산 벡스코 B관</span></td>
                       <td><span>PCN</span></td>
+                      <td>
+                        <div class="grid-wrap">
+                          <button class="btn-monitoring bg-green auto rounded"><em>모니터링</em></button>
+                        </div>
+                      </td>
                     </tr>
                     <tr>
                       <td><span>13</span></td>
                       <td><span>2022.01.03 09시 00분 ~ 14시 30분</span></td>
                       <td class="tit">
-                        <span>
+                        <span class="mgt">
                           <a href="./detail.html">
                             FRB의 다중 파장 연구 및 우주론적 사용파장 연구 및 우주론적 사용우주론적 사용
                           </a>
+                          <em>(종료)</em>
                         </span>
                       </td>
-                      <td><span>종료</span></td>
                       <td><span>부산 벡스코 D관</span></td>
                       <td><span>PCN</span></td>
+                      <td>
+                        <div class="grid-wrap">
+                          <button class="btn-replay bg-blueGray auto rounded"><em>다시보기</em></button>
+                        </div>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -288,6 +303,9 @@
                       <dt>날짜</dt>
                       <dd>2022.01.03 09시 00분 ~ 14시 30분</dd>
                     </dl>
+                    <div class="btn-wrap">
+                      <button class="btn-monitoring bg-green rounded"><em>모니터링</em></button>
+                    </div>
                   </li>
                   <li>
                     <div class="tit">
@@ -308,6 +326,9 @@
                       <dt>날짜</dt>
                       <dd>2022.01.03 09시 00분 ~ 14시 30분</dd>
                     </dl>
+                    <div class="btn-wrap">
+                      <button class="btn-monitoring bg-green rounded"><em>모니터링</em></button>
+                    </div>
                   </li>
                   <li>
                     <div class="tit">
@@ -329,6 +350,9 @@
                       <dt>날짜</dt>
                       <dd>2022.01.03 09시 00분 ~ 14시 30분</dd>
                     </dl>
+                    <div class="btn-wrap">
+                      <button class="btn-replay bg-blueGray rounded"><em>다시보기</em></button>
+                    </div>
                   </li>
                 </ul>
               </div>

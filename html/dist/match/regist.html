@@ -10,10 +10,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 
 
-  <title>MICE미팅프로그램</title>
-  <script src="assets/js/lib.js"></script>
-  <script defer src="assets/js/common.js"></script>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>매치메이킹 등록 | MICE미팅프로그램</title>
+  <script src="../assets/js/lib.js"></script>
+  <script defer src="../assets/js/common.js"></script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
 
 
 </head>
@@ -41,7 +41,7 @@
       <div class="h-top">
         <div class="inner clear">
           <div class="bx-left">
-            <a href="./index.html">
+            <a href="../index.html">
               <span class="symbol">
                 <em class="hidden-txt">마이스 플랫폼</em>
               </span>
@@ -60,7 +60,7 @@
       <div class="h-body">
         <div class="inner clear">
           <div class="bx-left">
-            <a href="./index.html">
+            <a href="../index.html">
               <span class="symbol">
                 <em class="hidden-txt">마이스 나이스</em>
               </span>
@@ -128,7 +128,7 @@
 
     <!-- #contents -->
     <main id="contents">
-      <h1 class="hidden-txt">미팅프로그램</h1>
+      <h1 class="hidden-txt">미팅프로그램 - 매치메이킹 등록</h1>
 
       <!-- 상단 배너 -->
       <section class="top-bnr">
@@ -142,81 +142,82 @@
       <section class="contents">
         <nav class="tab-menu">
           <ul>
-            <li><a href="webina/list.html">웨비나</a></li>
-            <li><a href="vdConference/list.html">화상회의</a></li>
-            <li><a href="booth/list.html">부스라이브</a></li>
-            <li><a href="match/list.html">매치메이킹</a></li>
+            <li><a href="../webina/list.html">웨비나</a></li>
+            <li><a href="../vdConference/list.html">화상회의</a></li>
+            <li><a href="../booth/list.html">부스라이브</a></li>
+            <li class="on"><a href="../match/list.html">매치메이킹</a></li>
           </ul>
         </nav>
         <div class="cts-wrap">
           <header class="cts-header tit">
-            <h3>미팅프로그램</h3>
+            <h3>매치메이킹 등록</h3>
           </header>
           <div class="cts-body">
             <div class="container">
-              <div class="sub-tit">
-                <h4>2022 제 31회 국제천문연맹 총회 XXXIst General Assembly of International</h4>
+              <p class="info align-r">&nbsp;필수 입력 정보 입니다.</p>
+              <!-- pc -->
+              <div class="tblStyle type-2 customedScroll scrollable">
+                <table>
+                  <caption>
+                    매치메이킹 등록(제목, 카테고리, 태그, 내용으로 구성된 표)
+                  </caption>
+                  <colgroup>
+                    <col style="width: 12%" />
+                    <col style="width: auto" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="col"><b class="est">제목</b></th>
+                      <td>
+                        <div class="text-wrap">
+                          <input type="text" placeholder="제목을 입력해주세요." />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="col"><b class="est">카테고리</b></th>
+                      <td>
+                        <div class="select-wrap md">
+                          <label for="cate1"><em>카테고리 선택 1</em></label>
+                          <select name="" id="cate1">
+                            <option value="" class="default">행성과학</option>
+                            <option value="">선택</option>
+                            <option value="">선택</option>
+                          </select>
+                        </div>
+                        <div class="select-wrap md">
+                          <label for="cate2"><em>카테고리 선택 2</em></label>
+                          <select name="" id="cate2">
+                            <option value="" class="default">위성</option>
+                            <option value="">선택</option>
+                            <option value="">선택</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="col"><b class="est">태그</b></th>
+                      <td>
+                        <div class="text-wrap">
+                          <input type="text" placeholder="태그를 입력해주세요." value="사진, 우주" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="col"><b>내용</b></th>
+                      <td>
+                        <div class="text-wrap">
+                          <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <ul class="grid-wrap col-4">
-                <li class="grid-item">
-                  <div class="list-item item-01">
-                    <a href="webina/list.html">
-                      <span><em class="hidden-txt">웨비나 바로가기</em></span>
-                      <dl>
-                        <dt><strong>웨비나</strong></dt>
-                        <dd class="flex--wrap column">
-                          <span>총&nbsp;<b>100</b>건</span>
-                          <span>진행&middot;대기&nbsp;<b>20</b>건</span>
-                          <span>종료&nbsp;<b>80</b>건</span>
-                        </dd>
-                      </dl>
-                    </a>
-                  </div>
-                </li>
-                <li class="grid-item">
-                  <div class="list-item item-02">
-                    <a href="vdConference/list.html">
-                      <span><em class="hidden-txt">화상회의 바로가기</em></span>
-                      <dl>
-                        <dt><strong>화상 회의</strong></dt>
-                        <dd class="flex--wrap column">
-                          <span>총&nbsp;<b>300</b>건</span>
-                          <span>진행&middot;대기&nbsp;<b>20</b>건</span>
-                          <span>종료&nbsp;<b>280</b>건</span>
-                        </dd>
-                      </dl>
-                    </a>
-                  </div>
-                </li>
-                <li class="grid-item">
-                  <div class="list-item item-03">
-                    <a href="booth/list.html">
-                      <span><em class="hidden-txt">부스라이브 바로가기</em></span>
-                      <dl>
-                        <dt><strong>부스 라이브</strong></dt>
-                        <dd class="flex--wrap column">
-                          <span>부스&nbsp;<b>300</b>건</span>
-                          <span>라이브&middot;대기&nbsp;<b>180</b>건</span>
-                        </dd>
-                      </dl>
-                    </a>
-                  </div>
-                </li>
-                <li class="grid-item">
-                  <div class="list-item item-04">
-                    <a href="match/list.html">
-                      <span><em class="hidden-txt">매치 메이킹 바로가기</em></span>
-                      <dl>
-                        <dt><strong>매치 메이킹</strong></dt>
-                        <dd class="flex--wrap column">
-                          <span>총&nbsp;<b>300</b>건</span>
-                          <span>태그&nbsp;<b>180</b>건</span>
-                        </dd>
-                      </dl>
-                    </a>
-                  </div>
-                </li>
-              </ul>
+              <div class="btn-wrap align-c half">
+                <button class="btn-cancel wide rounded bg-gray" type="button"><em>취소</em></button>
+                <button class="btn-write wide rounded bg-navy" type="button"><em>등록</em></button>
+              </div>
             </div>
           </div>
         </div>

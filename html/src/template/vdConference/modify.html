@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../include/head.html', { page_main: false, page_title:'화상회의 수정' })
+  </head>
+  <body>
+    @@include('../include/skipNav.html')
+
+    <div id="layout">
+      <!-- #gnb -->
+      <header id="gnb">@@include('../include/gnb.html', { path:'..' })</header>
+      <!-- // #gnb -->
+
+      <!-- #contents -->
+      <main id="contents">
+        <h1 class="hidden-txt">미팅프로그램 - 화상회의</h1>
+
+        <!-- 상단 배너 -->
+        <section class="top-bnr">
+          <div class="container">
+            <h2>
+              <strong>미팅프로그램</strong><br />
+              <span><b>미팅관리자</b>님 반갑습니다! <br class="mob-only" />미팅프로그램 페이지 입니다.</span>
+            </h2>
+          </div>
+        </section>
+        <section class="contents">
+          <nav class="tab-menu">
+            <ul>
+              <li><a href="../webina/list.html">웨비나</a></li>
+              <li class="on"><a href="../vdConference/list.html">화상회의</a></li>
+              <li><a href="../booth/list.html">부스라이브</a></li>
+              <li><a href="../match/list.html">매치메이킹</a></li>
+            </ul>
+          </nav>
+          <div class="cts-wrap">
+            <header class="cts-header tit">
+              <h3>화상회의 수정</h3>
+            </header>
+            <div class="cts-body">
+              <div class="container">
+                <p class="info align-r">&nbsp;필수 입력 정보 입니다.</p>
+                <!-- pc -->
+                <div class="tblStyle type-2 customedScroll scrollable">
+                  <table>
+                    <caption>
+                      화상회의 수정(순번, 제목, 날짜, 장소, 개설자, 설명, 상태로 구성된 표)
+                    </caption>
+                    <colgroup>
+                      <col style="width: 10%" />
+                      <col style="width: 40%" />
+                      <col style="width: 10%" />
+                      <col style="width: auto" />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="col"><b>순번</b></th>
+                        <td colspan="3">
+                          <span>14</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="col"><b class="est">제목</b></th>
+                        <td colspan="3">
+                          <div class="text-wrap">
+                            <input type="text" placeholder="제목을 입력해주세요." value="FRB의 다중 파장 연구 및 우주론적 사용" />
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="col"><b class="est">날짜</b></th>
+                        <td>
+                          <div class="text-wrap calendar md">
+                            <input type="text" inputmode="none" value="2022-06-20" />
+                          </div>
+                        </td>
+                        <th scope="col"><b class="est">시간</b></th>
+                        <td>
+                          <div class="text-wrap time both">
+                            <input type="text" inputmode="none" value="13시 30분" />
+                          </div>
+                          <div class="text-wrap time both">
+                            <input type="text" inputmode="none" value="15시 30분" />
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="col"><b class="est">장소</b></th>
+                        <td colspan="3">
+                          <div class="text-wrap">
+                            <input type="text" placeholder="장소를 입력해주세요." value="벡스코 B관" />
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="col"><b class="est">개설자</b></th>
+                        <td colspan="3">
+                          <div class="text-wrap has-button">
+                            <input type="text" placeholder="업체명 또는 발표자명을 입력해주세요." />
+                            <div class="btn-wrap inline">
+                              <button class="btn-search bg-navy2 rounded"><em>검색</em></button>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="col"><b>설명</b></th>
+                        <td colspan="3">
+                          <div class="text-wrap">
+                            <textarea name="" id="" cols="30" rows="10">
+AR, VR 기기 관련 프로그램 다운로드 링크 입니다. 참여 전에 참고하여 주시기 바랍니다.&#13;AR관련 프로그램: http://metaspace.co.kr/wp/show VR관련 프로그램: http://metaspace.co.kr/wp/portfolio</textarea
+                            >
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="col"><b>상태</b></th>
+                        <td colspan="3">
+                          <div class="radio-wrap has-button">
+                            <span>
+                              <input type="radio" name="status" id="r" />
+                              <label for="r"><em>대기</em></label>
+                            </span>
+                            <span>
+                              <input type="radio" name="status" id="p" />
+                              <label for="p"><em>진행중</em></label>
+                            </span>
+                            <span>
+                              <input type="radio" name="status" id="e" checked />
+                              <label for="e"><em>종료</em></label>
+                            </span>
+                          </div>
+                          <div class="btn-wrap inline">
+                            <button class="btn-search bg-navy2 rounded"><em>검색</em></button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="btn-wrap align-c triple">
+                  <button class="btn-cancel wide rounded bg-gray" type="button"><em>취소</em></button>
+                  <button class="btn-modify wide rounded bg-navy" type="button"><em>수정</em></button>
+                  <button class="btn-delete wide rounded bg-blueGray" type="button"><em>삭제</em></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- // #contents -->
+
+      <!-- #footer -->
+      <footer id="footer">@@include('../include/footer.html')</footer>
+      <!-- // #footer -->
+    </div>
+  </body>
+</html>

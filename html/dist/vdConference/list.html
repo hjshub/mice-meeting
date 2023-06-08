@@ -13,8 +13,6 @@
   <title>화상회의 목록 | MICE미팅프로그램</title>
   <script src="../assets/js/lib.js"></script>
   <script defer src="../assets/js/common.js"></script>
-
-  <link rel="stylesheet" href="../assets/css/jquery-ui.min.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 
 
@@ -171,9 +169,6 @@
                       <div class="text-wrap calendar">
                         <input type="text" inputmode="none" />
                       </div>
-                      <div class="text-wrap calendar">
-                        <input type="text" inputmode="none" />
-                      </div>
                     </dd>
                   </dl>
                   <dl>
@@ -214,7 +209,7 @@
                     <col style="width: 10%" />
                     <col style="width: 15%" />
                     <col style="width: 10%" />
-                    <col style="width: 130px" />
+                    <col style="width: 8%" />
                   </colgroup>
                   <thead>
                     <tr>
@@ -223,7 +218,7 @@
                       <th scope="col">제목</th>
                       <th scope="col">상태</th>
                       <th scope="col">장소</th>
-                      <th scope="col">발표자</th>
+                      <th scope="col">개설자</th>
                       <th scope="col">메뉴</th>
                     </tr>
                   </thead>
@@ -241,9 +236,7 @@
                       <td><span class="txt-color orange">대기</span></td>
                       <td><span>부산 벡스코 A관</span></td>
                       <td><span>PCN</span></td>
-                      <td>
-                        <button class="btn-replay bg-green rounded"><em>다시보기</em></button>
-                      </td>
+                      <td>&nbsp;</td>
                     </tr>
                     <tr>
                       <td><span>14</span></td>
@@ -258,9 +251,7 @@
                       <td><span class="txt-color skyblue">진행중</span></td>
                       <td><span>부산 벡스코 B관</span></td>
                       <td><span>PCN</span></td>
-                      <td>
-                        <button class="btn-replay bg-green rounded"><em>다시보기</em></button>
-                      </td>
+                      <td>&nbsp;</td>
                     </tr>
                     <tr>
                       <td><span>13</span></td>
@@ -276,7 +267,9 @@
                       <td><span>부산 벡스코 D관</span></td>
                       <td><span>PCN</span></td>
                       <td>
-                        <button class="btn-replay bg-green rounded"><em>다시보기</em></button>
+                        <div class="grid-wrap">
+                          <button class="btn-replay bg-green auto rounded"><em>다시보기</em></button>
+                        </div>
                       </td>
                     </tr>
                   </tbody>
