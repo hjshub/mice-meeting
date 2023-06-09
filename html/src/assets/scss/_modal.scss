@@ -257,6 +257,9 @@
         }
 
         .list {
+          max-height: 212px;
+          padding-right: 8px;
+
           div {
             & + div {
               margin-top: 10px;
@@ -267,6 +270,7 @@
             column-gap: 10px;
             row-gap: 10px;
             margin-top: 10px;
+            padding-right: 8px;
 
             button {
               margin: 0;
@@ -300,6 +304,7 @@
       }
 
       .editRecord {
+        max-height: 210px;
         margin-bottom: 20px;
 
         .recordItem {
@@ -370,7 +375,7 @@
           }
 
           .text-wrap {
-            width: 550px;
+            width: 600px;
             font-size: 0;
 
             @include _bp(561px) {
@@ -391,6 +396,8 @@
       }
 
       .viewRecord {
+        max-height: 200px;
+
         .recordItem {
           font-size: 1.6rem;
           color: #a5a6ac;
@@ -474,6 +481,11 @@
           border: 1px solid $blueGray;
           border-radius: 0 0 10px 10px;
           padding: 20px;
+
+          ul {
+            max-height: 210px;
+            padding-right: 8px;
+          }
         }
 
         & + .btn-wrap {
@@ -517,6 +529,11 @@
           border: 1px solid $blueGray;
           border-radius: 0 0 10px 10px;
           padding: 20px;
+
+          ul {
+            max-height: 210px;
+            padding-right: 8px;
+          }
         }
         .chart {
           position: relative;

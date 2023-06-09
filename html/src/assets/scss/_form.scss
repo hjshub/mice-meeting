@@ -557,21 +557,23 @@ button {
     }
   }
 
-  &.e_mail {
-    &,
-    & + .select-wrap {
-      width: 100%;
-      max-width: 210px;
+  @at-root .e_mail {
+    display: grid;
+    column-gap: 0;
+    row-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
 
-      @include _bp(561px) {
-        width: -webkit-calc((100% - 30px) / 2);
-        width: -moz-calc((100% - 30px) / 2);
-        width: calc((100% - 30px) / 2);
-      }
+    @include _bp(480px) {
+      grid-template-columns: repeat(1, 1fr);
     }
 
-    & + .select-wrap {
-      margin-left: 30px;
+    .text-wrap,
+    .select-wrap {
+      width: 100%;
+    }
+
+    .select-wrap {
+      padding-left: 30px;
 
       select {
         @include _bp(561px) {
@@ -582,11 +584,21 @@ button {
       &::before {
         position: absolute;
         top: 50%;
-        left: -30px;
+        left: 0;
         line-height: 1;
         font-size: 1.6rem;
+        z-index: 10;
         @include transform(translate(50%, -50%));
         content: '@';
+      }
+
+      & + .text-wrap {
+        padding-left: 10px;
+        margin: 0;
+
+        @include _bp(480px) {
+          padding-left: 0;
+        }
       }
     }
   }
@@ -710,6 +722,86 @@ button {
 }
 
 /*checkbox*/
+.chk-wrap {
+  &.inline {
+    display: inline-block;
+  }
+
+  span {
+    display: inline-block;
+    font-size: 0;
+    position: relative;
+
+    input[type='checkbox'] {
+      position: absolute;
+      left: 0;
+      top: 0;
+      border: 0;
+      width: 16px;
+      height: 16px;
+      opacity: 0;
+
+      & + label {
+        display: inline-block;
+        padding-left: 16px;
+        height: 16px;
+        vertical-align: top;
+        line-height: 16px;
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 16px;
+          height: 16px;
+          border: 1px solid #d4dbe2;
+          background-color: transparent;
+          pointer-events: none;
+          content: '';
+        }
+
+        &::after {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          background-color: transparent;
+          @include icon--retina;
+          @include icon--retina-unchecked;
+          @include transform(translateY(-50%));
+          margin-left: 3px;
+          pointer-events: none;
+          content: '';
+        }
+
+        em {
+          display: inline-block;
+          line-height: 1;
+          text-align: left;
+          font-size: 1.4rem;
+          margin-top: -1px;
+          margin-left: 6px;
+        }
+      }
+
+      &:checked {
+        & + label {
+          &::before {
+            border-color: $navy;
+            background-color: $navy;
+          }
+
+          &::after {
+            @include icon--retina-checked;
+          }
+        }
+      }
+    }
+    & + span {
+      margin-left: 10px;
+    }
+  }
+}
+
 .chk-wrap-type02 {
   text-align: left;
 

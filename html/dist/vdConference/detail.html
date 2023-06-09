@@ -589,7 +589,7 @@
               </dd>
               <dt><span class="est">항목</span></dt>
               <dd>
-                <div class="list">
+                <div class="list customedScroll">
                   <div class="text-wrap">
                     <input type="text" value="O형" />
                   </div>
@@ -644,7 +644,8 @@
           <dl class="voteList">
             <dt><b>Q. 참여자 혈액형 투표</b></dt>
             <dd>
-              <ul class="grid-wrap gap10">
+              <!-- 단일 선택 -->
+              <ul class="grid-wrap gap10 customedScroll">
                 <li>
                   <div class="radio-wrap flex--wrap center edge">
                     <span>
@@ -701,6 +702,76 @@
                   </div>
                 </li>
               </ul>
+
+              <!-- 복수 선택 -->
+              <!-- <ul class="grid-wrap gap10 customedScroll">
+            <li>
+              <div class="chk-wrap flex--wrap center edge">
+                <span>
+                  <input type="checkbox" id="list1" />
+                  <label for="list1"></label>
+                </span>
+                <span class="text-wrap">
+                  <input type="text" value="O형" readonly />
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="chk-wrap flex--wrap center edge">
+                <span>
+                  <input type="checkbox" id="list2" />
+                  <label for="list2"></label>
+                </span>
+                <span class="text-wrap">
+                  <input type="text" value="AB형" readonly />
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="chk-wrap flex--wrap center edge">
+                <span>
+                  <input type="checkbox" id="list3" />
+                  <label for="list3"></label>
+                </span>
+                <span class="text-wrap">
+                  <input type="text" value="A형" readonly />
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="chk-wrap flex--wrap center edge">
+                <span>
+                  <input type="checkbox" id="list4" />
+                  <label for="list4"></label>
+                </span>
+                <span class="text-wrap">
+                  <input type="text" value="B형" readonly />
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="chk-wrap flex--wrap center edge">
+                <span>
+                  <input type="checkbox" id="list5" />
+                  <label for="list5"></label>
+                </span>
+                <span class="text-wrap">
+                  <input type="text" value="RH-형" readonly />
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="chk-wrap flex--wrap center edge">
+                <span>
+                  <input type="checkbox" id="list6" />
+                  <label for="list6"></label>
+                </span>
+                <span class="text-wrap">
+                  <input type="text" value="RH-형" readonly />
+                </span>
+              </div>
+            </li>
+          </ul> -->
             </dd>
           </dl>
           <div class="btn-wrap align-c">
@@ -735,7 +806,7 @@
               <span>참여 <b>74</b>명</span>
             </dt>
             <dd>
-              <ul class="grid-wrap gap10">
+              <ul class="grid-wrap gap10 customedScroll">
                 <li>
                   <div class="chart flex--wrap center">
                     <span class="data flex--wrap center"><b>O형</b></span>
@@ -802,13 +873,9 @@
           </dl>
         </div>
         <div class="modal-contents">
-          <div class="editRecord">
+          <div class="editRecord customedScroll">
             <div class="recordItem flex--wrap">
               <div class="flex--wrap">
-                <span class="setTime">
-                  <button type="button" class="increase"><em class="hidden-txt">증가</em></button>
-                  <button type="button" class="decrease"><em class="hidden-txt">감소</em></button>
-                </span>
                 <span>2022-11-01 13시 31분</span>
               </div>
               <div class="text-wrap has-button2">
@@ -820,10 +887,6 @@
             </div>
             <div class="recordItem flex--wrap">
               <div class="flex--wrap">
-                <span class="setTime">
-                  <button type="button" class="increase"><em class="hidden-txt">증가</em></button>
-                  <button type="button" class="decrease"><em class="hidden-txt">감소</em></button>
-                </span>
                 <span>2022-11-01 13시 32분</span>
               </div>
               <div class="text-wrap has-button2">
@@ -835,11 +898,40 @@
             </div>
             <div class="recordItem flex--wrap">
               <div class="flex--wrap">
-                <span class="setTime">
-                  <button type="button" class="increase"><em class="hidden-txt">증가</em></button>
-                  <button type="button" class="decrease"><em class="hidden-txt">감소</em></button>
-                </span>
                 <span>2022-11-01 13시 33분</span>
+              </div>
+              <div class="text-wrap has-button2">
+                <input type="text" value="회의록 시작합니다." />
+                <div class="btn-wrap inline">
+                  <button type="button" class="btn-modify bg-gray rounded"><em>수정</em></button>
+                </div>
+              </div>
+            </div>
+            <div class="recordItem flex--wrap">
+              <div class="flex--wrap">
+                <span>2022-11-01 13시 34분</span>
+              </div>
+              <div class="text-wrap has-button2">
+                <input type="text" value="회의록 시작합니다." />
+                <div class="btn-wrap inline">
+                  <button type="button" class="btn-modify bg-gray rounded"><em>수정</em></button>
+                </div>
+              </div>
+            </div>
+            <div class="recordItem flex--wrap">
+              <div class="flex--wrap">
+                <span>2022-11-01 13시 35분</span>
+              </div>
+              <div class="text-wrap has-button2">
+                <input type="text" value="회의록 시작합니다." />
+                <div class="btn-wrap inline">
+                  <button type="button" class="btn-modify bg-gray rounded"><em>수정</em></button>
+                </div>
+              </div>
+            </div>
+            <div class="recordItem flex--wrap">
+              <div class="flex--wrap">
+                <span>2022-11-01 13시 36분</span>
               </div>
               <div class="text-wrap has-button2">
                 <input type="text" value="회의록 시작합니다." />
@@ -851,7 +943,7 @@
           </div>
           <div class="saveRecord">
             <div class="flex--wrap">
-              <div>2022-11-01 13시 35분</div>
+              <div>2022-11-01 13시 36분</div>
               <div class="text-wrap has-button">
                 <textarea name="" id=""></textarea>
                 <div class="btn-wrap inline">
@@ -883,7 +975,7 @@
           </dl>
         </div>
         <div class="modal-contents">
-          <div class="viewRecord">
+          <div class="viewRecord customedScroll">
             <div class="recordItem flex--wrap">
               <div class="flex--wrap center">
                 <i class="icon icon-time"><em class="hidden-txt">시간</em></i>
@@ -902,6 +994,34 @@
               <div class="flex--wrap center">
                 <i class="icon icon-time"><em class="hidden-txt">시간</em></i>
                 <span>2022-11-01 13시 33분</span>
+              </div>
+              <p>홍길동님이 회의에 대해 의견을 제시함</p>
+            </div>
+            <div class="recordItem flex--wrap">
+              <div class="flex--wrap center">
+                <i class="icon icon-time"><em class="hidden-txt">시간</em></i>
+                <span>2022-11-01 13시 34분</span>
+              </div>
+              <p>홍길동님이 회의에 대해 의견을 제시함</p>
+            </div>
+            <div class="recordItem flex--wrap">
+              <div class="flex--wrap center">
+                <i class="icon icon-time"><em class="hidden-txt">시간</em></i>
+                <span>2022-11-01 13시 35분</span>
+              </div>
+              <p>홍길동님이 회의에 대해 의견을 제시함</p>
+            </div>
+            <div class="recordItem flex--wrap">
+              <div class="flex--wrap center">
+                <i class="icon icon-time"><em class="hidden-txt">시간</em></i>
+                <span>2022-11-01 13시 36분</span>
+              </div>
+              <p>홍길동님이 회의에 대해 의견을 제시함</p>
+            </div>
+            <div class="recordItem flex--wrap">
+              <div class="flex--wrap center">
+                <i class="icon icon-time"><em class="hidden-txt">시간</em></i>
+                <span>2022-11-01 13시 37분</span>
               </div>
               <p>홍길동님이 회의에 대해 의견을 제시함</p>
             </div>
@@ -932,8 +1052,8 @@
                 </div>
               </dd>
               <dt><span class="est">이메일</span></dt>
-              <dd>
-                <div class="text-wrap e_mail">
+              <dd class="e_mail">
+                <div class="text-wrap">
                   <input type="text" placeholder="ID를 입력해주세요." />
                 </div>
                 <div class="select-wrap">
@@ -941,6 +1061,9 @@
                   <select name="" id="mail">
                     <option selected>naver.com</option>
                   </select>
+                </div>
+                <div class="text-wrap">
+                  <input type="text" placeholder="이메일 직접 입력" />
                 </div>
               </dd>
               <dt><span class="est">초대 내용</span></dt>
