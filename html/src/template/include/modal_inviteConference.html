@@ -22,14 +22,19 @@
             <div class="text-wrap">
               <input type="text" placeholder="ID를 입력해주세요." />
             </div>
-            <div class="select-wrap">
-              <label for="mail"><em class="hidden-txt">이메일</em></label>
-              <select name="" id="mail">
-                <option selected>naver.com</option>
-              </select>
-            </div>
             <div class="text-wrap">
-              <input type="text" placeholder="이메일 직접 입력" />
+              <input type="text" id="set-mail-type" />
+            </div>
+            <div class="select-wrap">
+              <label for="set-mail"><em class="hidden-txt">이메일</em></label>
+              <select name="" id="set-mail">
+                <option class="default" selected>이메일 선택</option>
+                <option>naver.com</option>
+                <option>naver.com</option>
+                <option>naver.com</option>
+                <option>naver.com</option>
+                <option class="write">이메일 직접입력</option>
+              </select>
             </div>
           </dd>
           <dt><span class="est">초대 내용</span></dt>
@@ -46,3 +51,17 @@
     </div>
   </div>
 </div>
+
+<script>
+  const setMail = document.getElementById('set-mail');
+  const setMailType = document.getElementById('set-mail-type');
+
+  setMail.addEventListener('change', function () {
+    const option = document.querySelectorAll('#set-mail option');
+    const idx = setMail.selectedIndex;
+
+    if (idx == option.length - 1) {
+      setMailType.focus();
+    }
+  });
+</script>

@@ -572,32 +572,44 @@ button {
       width: 100%;
     }
 
+    .text-wrap {
+      & + .text-wrap {
+        padding-left: 30px;
+        margin: 0;
+        position: relative;
+
+        @include _bp(480px) {
+          padding-left: 0;
+        }
+
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          line-height: 1;
+          font-size: 1.6rem;
+          z-index: 10;
+          @include transform(translate(50%, -50%));
+          content: '@';
+
+          @include _bp(480px) {
+            content: none;
+            display: none;
+          }
+        }
+      }
+    }
+
     .select-wrap {
-      padding-left: 30px;
+      padding-left: 10px;
+
+      @include _bp(480px) {
+        padding-left: 0;
+      }
 
       select {
         @include _bp(561px) {
           min-width: auto;
-        }
-      }
-
-      &::before {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        line-height: 1;
-        font-size: 1.6rem;
-        z-index: 10;
-        @include transform(translate(50%, -50%));
-        content: '@';
-      }
-
-      & + .text-wrap {
-        padding-left: 10px;
-        margin: 0;
-
-        @include _bp(480px) {
-          padding-left: 0;
         }
       }
     }
@@ -675,7 +687,7 @@ button {
 
       &:focus + label {
         outline: 1px dashed $navy;
-        outline-offset: 1px;
+        outline-offset: -1px;
       }
 
       &:checked {
@@ -873,11 +885,10 @@ button {
         }
       }
 
-      // &:focus + label {
-      //   outline: 1px dashed $navy;
-      //   outline-offset: 1px;
-      //   box-shadow: 0px 0px 6px 2px rgba(35, 192, 255, 0.4);
-      // }
+      &:focus + label {
+        outline: 1px dashed $navy;
+        outline-offset: -1px;
+      }
 
       &:checked + label {
         color: $white;

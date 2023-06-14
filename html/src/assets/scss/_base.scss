@@ -15,7 +15,7 @@
 
   &:focus-visible {
     outline: 1px dashed $gray;
-    outline-offset: 1px;
+    outline-offset: -1px;
   }
 }
 
