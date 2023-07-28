@@ -53,6 +53,14 @@
     }
   }
 
+  &.grid-wrap {
+    button {
+      & + button {
+        margin-left: 0;
+      }
+    }
+  }
+
   & + .btn-wrap {
     margin-top: 10px;
   }
